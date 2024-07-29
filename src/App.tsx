@@ -60,17 +60,26 @@ const App: React.FC = () => {
             <p className="break-all text-gray-700">{address}</p>
           </div>
         )}
-        <div className="mt-6 p-4 bg-white rounded shadow-lg">
+        <div className="mt-6 p-4 bg-white rounded shadow-lg justify-center items-center text-center">
           <h2 className="text-lg font-bold text-gray-900">Example Usage</h2>
-          <pre className="bg-gray-100 p-4 rounded text-sm text-gray-800">
-            {`// Example with single bit position
-uint160 flags = uint160(1 << 3);
-address myAddr = address(flags);`}
+          <pre className="bg-gray-100 text-start justify-center items-center  p-4 rounded text-xs text-gray-800">
+            {`Example with single bit position
+             uint160 flags = uint160(1 << 3);
+            address myAddr = address(flags);
+            the position for this will be 3
+            enter 3 in the input field
+            the result will be:
+             0x0000000000000000000000000000000000000008`}
           </pre>
-          <pre className="bg-gray-100 p-4 rounded text-sm text-gray-800 mt-4">
-            {`// Example with multiple bit positions
-uint160 flags = uint160(1 << 3 | 1 << 91);
-address myAddr = address(flags);`}
+          <pre className="bg-gray-100 text-start justify-center  p-4 rounded text-xs text-gray-800 mt-4">
+            {`Example with multiple bit positions
+uint160 flags = uint160(1 << 3 | 1 << 10);
+address myAddr = address(flags);
+
+the positions for this will be 3 and 10 
+enter 3,10 in the input field
+the result will be:
+             0x0000000000000000000000000000000000000408`}
           </pre>
         </div>
       </div>
